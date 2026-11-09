@@ -1,0 +1,8 @@
+.github/
+.pre-commit-config.yaml
+
+dist/
+node_modules/
+
+package-lock.json
+.astro/

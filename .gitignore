@@ -1,0 +1,6 @@
+mise.local.toml
+
+node_modules/
+dist/
+
+.astro/

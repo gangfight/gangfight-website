@@ -1,0 +1,33 @@
+{
+  "name": "gangfight-website",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "build": "astro build",
+    "lint": "astro check",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "astro": "6.4.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript": "5.9.3"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "fsevents@2.3.3": true,
+    "sharp@0.34.5": true
+  }
+}

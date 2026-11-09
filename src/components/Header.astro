@@ -1,0 +1,36 @@
+---
+import { path, t, type Locale } from '../i18n'
+
+interface Props {
+  locale: Locale
+  switchTo: Locale
+  switchHref: string
+}
+
+const { locale, switchTo, switchHref } = Astro.props
+const m = t(locale)
+const home = path(locale)
+const flags: Record<Locale, string> = { en: '🇬🇧', de: '🇩🇪' }
+---
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href={home}>
+      <img src="/favicon.svg" alt="" width="26" height="26" />
+      {m.name}
+    </a>
+    <nav aria-label="Main">
+      <a href={`${home}#game`}>{m.nav.game}</a>
+      <a href={`${home}#fair`}>{m.nav.fair}</a>
+      <a href={`${home}#worlds`}>{m.nav.worlds}</a>
+      <a href={`${home}#soon`}>{m.nav.soon}</a>
+      <a
+        href={switchHref}
+        lang={switchTo}
+        hreflang={switchTo}
+        aria-label={m.language}
+        title={m.language}>{flags[switchTo]}</a
+      >
+    </nav>
+  </div>
+</header>

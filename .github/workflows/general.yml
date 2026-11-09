@@ -1,0 +1,46 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: General
+
+"on":
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  website:
+    name: Website Build Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+
+      - name: Install tools
+        uses: jdx/mise-action@v5
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run fmt
+        run: npm run fmt
+
+      - name: Run build
+        run: npm run build
+
+...

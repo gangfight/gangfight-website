@@ -1,0 +1,72 @@
+---
+# yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
+name: Pages
+
+"on":
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Website Build Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+
+      - name: Install tools
+        uses: jdx/mise-action@v5
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run fmt
+        run: npm run fmt
+
+      - name: Run build
+        run: npm run build
+
+      - name: Configure pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    name: Website Publish Job
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    needs:
+      - build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+...

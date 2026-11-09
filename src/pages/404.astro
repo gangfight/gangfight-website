@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro'
+import { path, t } from '../i18n'
+
+const m = t('en')
+---
+
+<Base locale="en" title={`${m.notFound.title} · ${m.name}`} robots="noindex">
+  <section>
+    <div class="wrap">
+      <h1>{m.notFound.title}</h1>
+      <p class="lead">{m.notFound.text}</p>
+      <a class="button" href={path('en')}>{m.notFound.back}</a>
+    </div>
+  </section>
+</Base>
