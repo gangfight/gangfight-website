@@ -1,0 +1,52 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: '3.40'
+
+tasks:
+  clean:
+    desc: Remove all temporary build artifacts
+    cmds:
+      - rm -rf dist/ .astro/
+
+  check:
+    desc: Full verification, the only "done" signal (fmt, lint, build)
+    cmds:
+      - task: fmt:check
+      - task: lint
+      - task: build
+
+  install:
+    desc: Install the dependencies
+    cmds:
+      - npm ci
+
+  dev:
+    desc: Start the development server on http://localhost:4321
+    cmds:
+      - npm run dev
+
+  fmt:
+    desc: Run the formatter
+    cmds:
+      - npm run fmt
+
+  fmt:check:
+    desc: Check the formatting
+    cmds:
+      - npm run fmt:check
+
+  lint:
+    desc: Type-check the Astro sources
+    cmds:
+      - npm run check
+
+  build:
+    desc: Build the static site into dist/
+    cmds:
+      - npm run build
+
+  preview:
+    desc: Serve the built site
+    deps: [build]
+    cmds:
+      - npm run preview

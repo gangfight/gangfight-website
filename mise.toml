@@ -1,0 +1,9 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+min_version = "2026.9.13"
+
+[tools]
+gh = "2.103.3"
+node = "26"
+prek = "0.5.10"
+task = "3.54.0"

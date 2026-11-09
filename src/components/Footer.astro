@@ -1,0 +1,20 @@
+---
+import { path, t, type Locale } from '../i18n'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const m = t(locale)
+const year = new Date().getFullYear()
+---
+
+<footer class="site">
+  <div class="wrap">
+    <a href={path(locale, 'imprint')}>{m.footer.imprint}</a>
+    <a href={path(locale, 'privacy')}>{m.footer.privacy}</a>
+    <a href={path(locale, 'terms')}>{m.footer.terms}</a>
+    <span class="rights">© {year} {m.name}. {m.footer.rights}</span>
+  </div>
+</footer>

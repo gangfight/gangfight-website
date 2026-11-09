@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro'
+import { path, t, type Locale } from '../i18n'
+
+interface Props {
+  locale: Locale
+  page: 'imprint' | 'privacy' | 'terms'
+}
+
+const { locale, page } = Astro.props
+const m = t(locale)
+const doc = m.legal[page]
+---
+
+<Base
+  locale={locale}
+  page={page}
+  title={`${doc.title} · ${m.name}`}
+  description={doc.lead}
+>
+  <section>
+    <div class="wrap legal">
+      <h1>{doc.title}</h1>
+      <p class="lead">{doc.lead}</p>
+      <p class="placeholder" role="note">{m.legal.placeholder}</p>
+      {
+        doc.sections.map((section) => (
+          <>
+            <h2>{section.title}</h2>
+            {section.lines.map((line) => (
+              <p>{line}</p>
+            ))}
+          </>
+        ))
+      }
+      <p><a href={path(locale)}>{m.legal.back}</a></p>
+    </div>
+  </section>
+</Base>

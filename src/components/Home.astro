@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro'
+import { t, type Locale } from '../i18n'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const m = t(locale)
+---
+
+<Base locale={locale}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">{m.hero.kicker}</p>
+      <h1>{m.hero.title}</h1>
+      <p class="lead">{m.hero.lead}</p>
+      <a class="button" href="#soon">{m.hero.cta}</a>
+      <p class="note">{m.hero.note}</p>
+    </div>
+  </section>
+
+  <section id="game">
+    <div class="wrap">
+      <h2>{m.pillars.title}</h2>
+      <div class="grid">
+        {
+          m.pillars.items.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="fair" class="alt">
+    <div class="wrap">
+      <h2>{m.fair.title}</h2>
+      <p class="lead">{m.fair.lead}</p>
+      <ul class="checks">
+        {m.fair.items.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section id="worlds">
+    <div class="wrap">
+      <h2>{m.worlds.title}</h2>
+      <p class="lead">{m.worlds.text}</p>
+    </div>
+  </section>
+
+  <section id="soon" class="alt">
+    <div class="wrap">
+      <h2>{m.soon.title}</h2>
+      <ol class="steps">
+        {
+          m.soon.items.map((item) => (
+            <li>
+              <span class="when">{item.when}</span>
+              <span>{item.what}</span>
+            </li>
+          ))
+        }
+      </ol>
+      <p>
+        {m.soon.contact}
+        <a href="mailto:foo@gangfight.eu">foo@gangfight.eu</a>
+      </p>
+    </div>
+  </section>
+</Base>
