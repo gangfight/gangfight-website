@@ -1,5 +1,7 @@
 # Gangfight: Website
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b5d751af59ed4e35907fa6f4c6f3a3d9)](https://app.codacy.com/gh/gangfight/gangfight-website/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![General Workflow](https://github.com/gangfight/gangfight-website/actions/workflows/general.yml/badge.svg)](https://github.com/gangfight/gangfight-website/actions/workflows/general.yml) [![Release Workflow](https://github.com/gangfight/gangfight-website/actions/workflows/release.yml/badge.svg)](https://github.com/gangfight/gangfight-website/actions/workflows/release.yml)
+
 The official website of Gangfight, a small static [Astro][astro] site with
 teaser content in English and German. It contains no game logic and talks to no
 API, just some static landing page content.
