@@ -102,7 +102,7 @@ export default {
         },
         {
           title: 'Contact',
-          lines: ['Email: foo@gangfight.eu', 'Phone: [Phone number]'],
+          lines: ['Email: info@gangfight.eu', 'Phone: [Phone number]'],
         },
         {
           title: 'Register and tax',
@@ -129,7 +129,7 @@ export default {
       sections: [
         {
           title: 'Controller',
-          lines: ['[Operator name], [address], email: foo@gangfight.eu'],
+          lines: ['[Operator name], [address], email: info@gangfight.eu'],
         },
         {
           title: 'Hosting and server logs',
@@ -147,13 +147,13 @@ export default {
         {
           title: 'Contact by email',
           lines: [
-            'If you write to foo@gangfight.eu we use your message and address only to answer you and delete them when the matter is settled, unless a legal duty requires us to keep them.',
+            'If you write to info@gangfight.eu we use your message and address only to answer you and delete them when the matter is settled, unless a legal duty requires us to keep them.',
           ],
         },
         {
           title: 'Your rights',
           lines: [
-            'You have the right of access, rectification, erasure, restriction, data portability and objection, and the right to complain to a supervisory authority. Write to foo@gangfight.eu.',
+            'You have the right of access, rectification, erasure, restriction, data portability and objection, and the right to complain to a supervisory authority. Write to info@gangfight.eu.',
             'The game itself has its own privacy notice that applies once you create an account.',
           ],
         },

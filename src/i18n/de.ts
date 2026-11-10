@@ -107,7 +107,7 @@ const de: Messages = {
         },
         {
           title: 'Kontakt',
-          lines: ['E-Mail: foo@gangfight.eu', 'Telefon: [Telefonnummer]'],
+          lines: ['E-Mail: info@gangfight.eu', 'Telefon: [Telefonnummer]'],
         },
         {
           title: 'Register und Steuer',
@@ -135,7 +135,7 @@ const de: Messages = {
         {
           title: 'Verantwortlicher',
           lines: [
-            '[Name des Betreibers], [Anschrift], E-Mail: foo@gangfight.eu',
+            '[Name des Betreibers], [Anschrift], E-Mail: info@gangfight.eu',
           ],
         },
         {
@@ -154,13 +154,13 @@ const de: Messages = {
         {
           title: 'Kontakt per E-Mail',
           lines: [
-            'Wenn du an foo@gangfight.eu schreibst, nutzen wir deine Nachricht und Adresse nur, um dir zu antworten, und löschen sie, wenn die Sache erledigt ist, sofern keine gesetzliche Pflicht zur Aufbewahrung besteht.',
+            'Wenn du an info@gangfight.eu schreibst, nutzen wir deine Nachricht und Adresse nur, um dir zu antworten, und löschen sie, wenn die Sache erledigt ist, sofern keine gesetzliche Pflicht zur Aufbewahrung besteht.',
           ],
         },
         {
           title: 'Deine Rechte',
           lines: [
-            'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Schreibe an foo@gangfight.eu.',
+            'Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie das Recht, dich bei einer Aufsichtsbehörde zu beschweren. Schreibe an info@gangfight.eu.',
             'Das Spiel hat eine eigene Datenschutzerklärung, die gilt, sobald du ein Konto anlegst.',
           ],
         },
