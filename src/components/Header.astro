@@ -10,7 +10,6 @@ interface Props {
 const { locale, switchTo, switchHref } = Astro.props
 const m = t(locale)
 const home = path(locale)
-const flags: Record<Locale, string> = { en: '🇬🇧', de: '🇩🇪' }
 ---
 
 <header class="site">
@@ -31,7 +30,7 @@ const flags: Record<Locale, string> = { en: '🇬🇧', de: '🇩🇪' }
         aria-label={m.language}
         title={m.language}
       >
-        {flags[switchTo]}
+        {t(switchTo).flag}
       </a>
     </nav>
   </div>

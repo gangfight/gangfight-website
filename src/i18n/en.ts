@@ -12,6 +12,7 @@ export default {
   },
   skip: 'Skip to content',
   language: 'Deutsch',
+  flag: '🇬🇧',
   hero: {
     kicker: 'Free to play · in your browser',
     title: 'Build your crew. Take the city.',

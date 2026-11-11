@@ -5,10 +5,13 @@ export const locales = ['en', 'de'] as const
 export type Locale = (typeof locales)[number]
 export type Messages = typeof en
 
-const messages: Record<Locale, Messages> = { en, de }
-
 export function t(locale: Locale): Messages {
-  return messages[locale]
+  switch (locale) {
+    case 'de':
+      return de
+    default:
+      return en
+  }
 }
 
 export const defaultLocale: Locale = 'en'

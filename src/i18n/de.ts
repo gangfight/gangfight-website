@@ -14,6 +14,7 @@ const de: Messages = {
   },
   skip: 'Zum Inhalt springen',
   language: 'English',
+  flag: '🇩🇪',
   hero: {
     kicker: 'Kostenlos spielen · im Browser',
     title: 'Bau deine Crew auf. Erobere die Stadt.',
