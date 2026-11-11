@@ -16,7 +16,9 @@ const m = t(locale)
       <p class="kicker">{m.hero.kicker}</p>
       <h1>{m.hero.title}</h1>
       <p class="lead">{m.hero.lead}</p>
-      <a class="button" href="#soon">{m.hero.cta}</a>
+      <a class="button" href="#soon">
+        {m.hero.cta}
+      </a>
       <p class="note">{m.hero.note}</p>
     </div>
   </section>
@@ -25,14 +27,12 @@ const m = t(locale)
     <div class="wrap">
       <h2>{m.pillars.title}</h2>
       <div class="grid">
-        {
-          m.pillars.items.map((item) => (
-            <article class="card">
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))
-        }
+        {m.pillars.items.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
@@ -42,7 +42,9 @@ const m = t(locale)
       <h2>{m.fair.title}</h2>
       <p class="lead">{m.fair.lead}</p>
       <ul class="checks">
-        {m.fair.items.map((item) => <li>{item}</li>)}
+        {m.fair.items.map((item) => (
+          <li>{item}</li>
+        ))}
       </ul>
     </div>
   </section>
@@ -58,14 +60,12 @@ const m = t(locale)
     <div class="wrap">
       <h2>{m.soon.title}</h2>
       <ol class="steps">
-        {
-          m.soon.items.map((item) => (
-            <li>
-              <span class="when">{item.when}</span>
-              <span>{item.what}</span>
-            </li>
-          ))
-        }
+        {m.soon.items.map((item) => (
+          <li>
+            <span class="when">{item.when}</span>
+            <span>{item.what}</span>
+          </li>
+        ))}
       </ol>
       <p>
         {m.soon.contact}

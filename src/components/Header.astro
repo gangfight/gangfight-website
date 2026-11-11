@@ -29,8 +29,10 @@ const flags: Record<Locale, string> = { en: '🇬🇧', de: '🇩🇪' }
         lang={switchTo}
         hreflang={switchTo}
         aria-label={m.language}
-        title={m.language}>{flags[switchTo]}</a
+        title={m.language}
       >
+        {flags[switchTo]}
+      </a>
     </nav>
   </div>
 </header>

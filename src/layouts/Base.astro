@@ -31,15 +31,9 @@ const canonical = new URL(path(locale, page), site)
     {robots && <meta name="robots" content={robots} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonical} />
-    {
-      locales.map((l) => (
-        <link
-          rel="alternate"
-          hreflang={l}
-          href={new URL(path(l, page), site)}
-        />
-      ))
-    }
+    {locales.map((l) => (
+      <link rel="alternate" hreflang={l} href={new URL(path(l, page), site)} />
+    ))}
     <link
       rel="alternate"
       hreflang="x-default"
@@ -53,7 +47,9 @@ const canonical = new URL(path(locale, page), site)
     <meta name="theme-color" content="#14110f" />
   </head>
   <body>
-    <a class="skip" href="#main">{m.skip}</a>
+    <a class="skip" href="#main">
+      {m.skip}
+    </a>
     <Header locale={locale} switchTo={other} switchHref={path(other, page)} />
     <main id="main">
       <slot />

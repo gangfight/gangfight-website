@@ -22,18 +22,20 @@ const doc = m.legal[page]
     <div class="wrap legal">
       <h1>{doc.title}</h1>
       <p class="lead">{doc.lead}</p>
-      <p class="placeholder" role="note">{m.legal.placeholder}</p>
-      {
-        doc.sections.map((section) => (
-          <>
-            <h2>{section.title}</h2>
-            {section.lines.map((line) => (
-              <p>{line}</p>
-            ))}
-          </>
-        ))
-      }
-      <p><a href={path(locale)}>{m.legal.back}</a></p>
+      <p class="placeholder" role="note">
+        {m.legal.placeholder}
+      </p>
+      {doc.sections.map((section) => (
+        <>
+          <h2>{section.title}</h2>
+          {section.lines.map((line) => (
+            <p>{line}</p>
+          ))}
+        </>
+      ))}
+      <p>
+        <a href={path(locale)}>{m.legal.back}</a>
+      </p>
     </div>
   </section>
 </Base>
