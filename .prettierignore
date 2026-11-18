@@ -1,8 +1,13 @@
 .github/
+
 .pre-commit-config.yaml
+.codacy.yml
+.releaserc
 
 dist/
 node_modules/
 
 package-lock.json
 .astro/
+
+CHANGELOG.md
