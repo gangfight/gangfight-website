@@ -9,7 +9,7 @@ name: Release
 
 concurrency:
   group: ${{ github.workflow }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
