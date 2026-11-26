@@ -3,6 +3,16 @@
 default_stages:
   - pre-commit
 
+exclude: |
+  (?x)^(
+    dist/|
+    dist-types/|
+    node_modules/|
+    coverage/|
+    e2e-test-report/|
+    \.cache/|
+  )
+
 repos:
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.26.0
@@ -12,5 +22,10 @@ repos:
           - commit-msg
         additional_dependencies:
           - "@commitlint/config-conventional"
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: v1.10.1
+    hooks:
+      - id: betterleaks-system
+        name: betterleaks
 
 ...
