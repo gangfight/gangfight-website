@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
-name: Automerge
+name: Automerge Dependabot
 
 "on":
   workflow_dispatch:
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   dependabot:
-    name: Automerge Dependabot PRs
+    name: Automerge Dependabot
     runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     if: github.actor == 'dependabot[bot]'
 

@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
-name: General
+name: General Checks
 
 "on":
   workflow_dispatch:
@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   website:
-    name: Website Build Test
+    name: Website Test
     runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     timeout-minutes: 15
 

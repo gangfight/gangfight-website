@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://www.schemastore.org/github-workflow.json
-name: Release
+name: Semantic Release
 
 "on":
   workflow_dispatch:
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   release:
-    name: Semantic Release Job
+    name: Semantic Release
     runs-on: blacksmith-2vcpu-ubuntu-2404-arm
 
     steps:
