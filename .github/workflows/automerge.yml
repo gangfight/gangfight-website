@@ -16,7 +16,7 @@ permissions:
 jobs:
   dependabot:
     name: Automerge Dependabot PRs
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     if: github.actor == 'dependabot[bot]'
 
     steps:

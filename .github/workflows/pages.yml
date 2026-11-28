@@ -18,12 +18,12 @@ permissions:
 jobs:
   build:
     name: Website Build Job
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     timeout-minutes: 15
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v7
+        uses: useblacksmith/checkout@v1
 
       - name: Install tools
         uses: jdx/mise-action@v5
@@ -50,7 +50,7 @@ jobs:
 
   deploy:
     name: Website Publish Job
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404-arm
     timeout-minutes: 15
 
     needs:
